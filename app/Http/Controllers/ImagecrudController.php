@@ -8,6 +8,6 @@ class ImagecrudController extends Controller
 {
     public function index()
     {
-
+        return view('index');
     }
 }
