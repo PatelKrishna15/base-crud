@@ -1,6 +1,6 @@
 @extends('welcome')
 @section('content')
-<a href="{{route('imageupload.showimg')}}">show Image</a>
+{{-- <a href="{{route('imageupload.showimg')}}">show Image</a> --}}
 <a href="{{route('create')}}" class="btn btn-dark mt-2">Add</a>
 <div class="container">
     <table class="table">
