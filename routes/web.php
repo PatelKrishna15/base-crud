@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PaginationController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
