@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PaginationController;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,14 @@ Route::get('/delete/{id}',[PaginationController::class,'destroy'])->name('delete
 Route::get('/edit/{id}',[PaginationController::class,'edit'])->name('edit');
 Route::post('/update',[PaginationController::class,'update'])->name('update');
 
+Route::get('send-mail', function () {
+   
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+   
+    Mail::to('krishahirapara666@gmail.com')->send(new \App\Mail\MyTestMail($details));
+   
+    dd("Email is Sent.");
+});
