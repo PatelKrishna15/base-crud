@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\PaginationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[CrudController::class,'index'])->name('index');
-Route::get('/create',[CrudController::class,'create'])->name('create');
-Route::post('/store',[CrudController::class,'store'])->name('store');
-Route::get('/delete/{id}',[CrudController::class,'destroy'])->name('delete');
-Route::get('/edit/{id}',[CrudController::class,'edit'])->name('edit');
-Route::post('/update',[CrudController::class,'update'])->name('update');
+Route::get('/',[PaginationController::class,'index'])->name('index');
+Route::get('/create',[PaginationController::class,'create'])->name('create');
+Route::post('/store',[PaginationController::class,'store'])->name('store');
+Route::get('/delete/{id}',[PaginationController::class,'destroy'])->name('delete');
+Route::get('/edit/{id}',[PaginationController::class,'edit'])->name('edit');
+Route::post('/update',[PaginationController::class,'update'])->name('update');
+
+
+Route::get('send-mail', [MailController::class, 'index']);
