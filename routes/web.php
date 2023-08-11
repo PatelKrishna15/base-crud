@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\PaginationController;
-use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +22,3 @@ Route::get('/delete/{id}',[PaginationController::class,'destroy'])->name('delete
 Route::get('/edit/{id}',[PaginationController::class,'edit'])->name('edit');
 Route::post('/update',[PaginationController::class,'update'])->name('update');
 
-
-Route::get('send-mail', [MailController::class, 'index']);

@@ -15,7 +15,7 @@ class MailController extends Controller
             'body' => 'This is for testing email using smtp.'
         ];
          
-        Mail::to('krishahirapara666@gmail.com')->send(new DemoMail($mailData));
+        Mail::to('sandbox.smtp.mailtrap.io')->send(new DemoMail($mailData));
            
         dd("Email is sent successfully.");
     }
