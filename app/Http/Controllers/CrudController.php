@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Crud;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class CrudController extends Controller
 {
