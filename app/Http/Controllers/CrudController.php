@@ -19,9 +19,7 @@ class CrudController extends Controller
     }
     public function store(Request $request)
     {
-        // Crud::create([
-        //     'name'=>$request->name,
-        // ]);
+        
         $data = new Crud();
         $data->name = $request->name;
         $data->save();
